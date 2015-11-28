@@ -1,0 +1,14 @@
+foo:
+  build: foo
+  container_name: foo
+bar:
+  build: bar
+  container_name: bar
+proxy:
+  build: proxy
+  container_name: proxy
+  links:
+  - foo
+  - bar
+  ports:
+  - 80:80
